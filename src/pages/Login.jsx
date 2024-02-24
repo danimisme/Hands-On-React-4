@@ -69,6 +69,12 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p>
+          Belum punya akun?{" "}
+          <a href="/register" className="text-info text-decoration-none">
+            Register
+          </a>
+        </p>
       </div>
     </>
   );

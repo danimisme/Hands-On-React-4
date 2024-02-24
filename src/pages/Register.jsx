@@ -40,6 +40,9 @@ const Register = () => {
             Login
           </button>
         </form>
+        <p>
+          Sudah punya akun ? <a href="/login">Login</a>
+        </p>
       </div>
     </>
   );
