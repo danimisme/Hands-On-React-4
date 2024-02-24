@@ -10,6 +10,10 @@ const Navbar = () => {
       <Link to="/menu" className="nav-item">
         Menu
       </Link>
+      <Link to="/login" className="nav-item">
+        {" "}
+        Login{" "}
+      </Link>
     </nav>
   );
 };
