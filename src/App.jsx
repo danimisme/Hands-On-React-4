@@ -5,6 +5,7 @@ import Menu from "./pages/Menu";
 import MenuDetail from "./pages/MenuDetail";
 import Login from "./pages/Login";
 import "./App.css";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/:id" element={<MenuDetail />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );
