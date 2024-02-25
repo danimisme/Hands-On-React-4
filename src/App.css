@@ -110,6 +110,23 @@ h1{
   transition: all 0.3s ease;
 }
 
+.btn-logout {
+  background-color: #ff0000;
+  margin: 0 10px;
+  color: #ffffff; 
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #fff;
+  color: #ff0000;
+}
+
 .btn:hover {
   background-color: #000;
   color: #fff;

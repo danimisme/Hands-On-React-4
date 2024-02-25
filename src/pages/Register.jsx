@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import InputForm from "../components/Input/InpurForm";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -41,7 +42,7 @@ const Register = () => {
           </button>
         </form>
         <p>
-          Sudah punya akun ? <a href="/login">Login</a>
+          Sudah punya akun ? <Link to="/login">Login</Link>
         </p>
       </div>
     </>
