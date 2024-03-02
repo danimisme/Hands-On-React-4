@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../App.css";
 import Layout from "../components/Layout";
+import CardMenu from "../components/CardMenu";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -32,24 +33,7 @@ const Menu = () => {
         </div>
         <div className="menu-container">
           {menu.map((item) => (
-            <div key={item.id} className="menu-card justify-content-between">
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              <img src={item.imageUrl} />
-              <div className="menu-button d-flex justify-content-center gap-3 mt-3">
-                <Link to={`/menu/${item.id}`} className="btn btn-secondary">
-                  View
-                </Link>
-                <Link to={`/edit-menu/${item.id}`} className="btn btn-primary">
-                  {" "}
-                  Edit{" "}
-                </Link>
-                <Link to={`/delete-menu/${item.id}`} className="btn btn-danger">
-                  {" "}
-                  Delete{" "}
-                </Link>
-              </div>
-            </div>
+            <CardMenu key={item.id} {...item} />
           ))}
         </div>
       </Layout>
