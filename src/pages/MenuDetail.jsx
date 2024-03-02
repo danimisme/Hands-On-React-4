@@ -43,7 +43,7 @@ const MenuDetail = () => {
         </p>
         <p>{detail?.description}</p>
         <Link to="/menu">
-          <button className="btn">Back</button>
+          <button className="button">Back</button>
         </Link>
       </div>
     </div>

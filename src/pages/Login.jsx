@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import InputForm from "../components/Input/InpurForm";
+import Layout from "../components/Layout";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -54,38 +55,39 @@ const Login = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="login-container">
-        <h1>Login</h1>
-        <form className="login-form">
-          {notif && <p>{notif}</p>}
-          <InputForm
-            name="username"
-            label="Username"
-            type="text"
-            placeholder="Username"
-            handleInput={handleUsernameChange}
-          />
-          <InputForm
-            name="password"
-            label="Password"
-            type="password"
-            placeholder="*******"
-            handleInput={handlePasswordChange}
-          />
-          <button
-            disabled={loading ? true : false}
-            className="btn"
-            type="submit"
-            onClick={handleLogin}
-          >
-            {loading ? "Loading..." : "Login"}
-          </button>
-        </form>
-        <p>
-          Belum punya akun? <Link to="/register">Register</Link>
-        </p>
-      </div>
+      <Layout>
+        <div className="login-container">
+          <h1>Login</h1>
+          <form className="login-form">
+            {notif && <p>{notif}</p>}
+            <InputForm
+              name="username"
+              label="Username"
+              type="text"
+              placeholder="Username"
+              handleInput={handleUsernameChange}
+            />
+            <InputForm
+              name="password"
+              label="Password"
+              type="password"
+              placeholder="*******"
+              handleInput={handlePasswordChange}
+            />
+            <button
+              disabled={loading ? true : false}
+              className="button"
+              type="submit"
+              onClick={handleLogin}
+            >
+              {loading ? "Loading..." : "Login"}
+            </button>
+          </form>
+          <p>
+            Belum punya akun? <Link to="/register">Register</Link>
+          </p>
+        </div>
+      </Layout>
     </>
   );
 };

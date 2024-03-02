@@ -34,7 +34,7 @@ const Register = () => {
             placeholder="*******"
           />
           <button
-            className="btn"
+            className="button"
             type="submit"
             onClick={(e) => e.preventDefault()}
           >

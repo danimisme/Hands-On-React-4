@@ -3,6 +3,7 @@ const Input = ({ name, type, placeholder, handleInput }) => {
     <>
       <input
         type={type}
+        name={name}
         id={name}
         onChange={handleInput}
         placeholder={placeholder}

@@ -1,3 +1,4 @@
+import AddMenu from "../pages/AddMenu";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Menu from "../pages/Menu";
@@ -37,5 +38,13 @@ export const routeList = [
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "add-menu",
+    element: (
+      <ProtectedRoute>
+        <AddMenu />
+      </ProtectedRoute>
+    ),
   },
 ];
